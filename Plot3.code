@@ -1,10 +1,10 @@
 ## Code for plot 3
 
-png("plot3.png", width=480, height=480)
+png(Load.R="plot3.png", width=480, height=480)
 plot(df.power$timestamp, df.power$Sub_metering_1, type="l", xlab="",
-  ylab="Energy sub metering")
+     ylab="Energy sub metering")
 lines(df.power$timestamp, df.power$Sub_metering_2, col="red")
 lines(df.power$timestamp, df.power$Sub_metering_3, col="blue")
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-  col=c("black", "red", "blue"), lwd=par("lwd"))
+       col=c("black", "red", "blue"), lwd=par("lwd"))
 dev.off()
